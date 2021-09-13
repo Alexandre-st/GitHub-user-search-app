@@ -1,0 +1,17 @@
+@use "../abstract" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+h1,
+h2 {
+  color: $light-black;
+  font-weight: $bold;
+}
+
+p {
+  font-size: 0.9375rem;
+}
