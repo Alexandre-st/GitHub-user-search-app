@@ -1,0 +1,71 @@
+@use '../abstract' as *;
+
+header {
+  margin: 31px 24px 16px 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  min-width: 327px;
+
+  h1 {
+    font-size: 1.625rem;
+  }
+
+  &-toggle {
+    display: flex;
+    gap: 1rem;
+
+    p {
+      color: var(--gray);
+      font-size: 0.8125rem;
+      letter-spacing: 2.5px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.search {
+  background-color: var(--white);
+  border-radius: 15px;
+
+  &-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6.5px 7px 7.5px 1rem;
+
+    input::placeholder {
+      color: var(--blue-gray);
+      font-size: 13px;
+    }
+
+    &-glass {
+      display: flex;
+      gap: 8.95px;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    width: 5.25rem;
+    height: 2.875rem;
+    background-color: var(--blue);
+    font-size: 0.875rem;
+    font-weight: $bold;
+    color: var(--white);
+    border-radius: 10px;
+    margin-left: -1rem;
+  }
+}
