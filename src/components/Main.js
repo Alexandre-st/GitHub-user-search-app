@@ -3,16 +3,17 @@ import React from 'react';
 const Main = () => {
   return ( 
     <main>
-      <div className="picture"></div>
-
       <div className="content">
         <div className="content-head">
-          <div className="content-head-title">
+          <div className="content-picture"></div>
+          <div className="content-head-content">
+          <div className="content-head-content-name">
             <h2>The Octocat</h2>
             <h3>Hastag du profil github</h3>
           </div>
-          <div className="content-head-date">
+          <div className="content-head-content-date">
             <p>Date à changer</p>
+          </div>
           </div>
         </div>
         <div className="content-details">

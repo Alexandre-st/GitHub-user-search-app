@@ -1,0 +1,63 @@
+main {
+  padding: 0 1.5rem 4.9375rem 1.5rem;
+}
+
+.content {
+  background-color: var(--background-content);
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+
+  &-head {
+    &-content {
+      &-name {
+        h2 {
+          color: var(--title-color);
+          font-weight: var(--bold);
+          line-height: 1.5rem;
+        }
+
+        h3 {
+          color: var(--blue);
+          font-size: 13px;
+        }
+      }
+
+      &-date {
+        color: var(--text-color);
+      }
+    }
+  }
+
+  &-details {
+    p {
+      color: var(--text-color);
+      margin-top: 2.0625rem;
+      line-height: 25px;
+    }
+
+    &-repo {
+      background-color: var(--background-repo);
+      display: flex;
+      padding: 1.125rem 0.875rem 0.9375rem 1.1875rem;
+      margin-top: 1.4375rem;
+      justify-content: space-around;
+      text-align: center;
+      border-radius: 10px;
+
+      h4 {
+        color: var(--text-color);
+        font-weight: normal;
+        font-size: 0.6875rem;
+        margin: 0;
+      }
+
+      p {
+        color: var(--repo-color);
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+}

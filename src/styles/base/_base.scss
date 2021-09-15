@@ -1,4 +1,4 @@
-@use "../abstract" as *;
+// @use "../abstract" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-color: var(--light-gray);
+  background-color: var(--background);
 }
 
 h1,
@@ -17,5 +17,5 @@ h2 {
 }
 
 p {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
 }
