@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import moon from '../assets/images/icon-moon.svg';
 import sun from '../assets/images/icon-sun.svg';
@@ -16,6 +16,20 @@ const Header = () => {
   // }
 
   const [mode, setMode] = useState('light');
+
+  useEffect(() => {
+    // Add listener to update styles
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => onSelectMode(e.matches ? 'dark' : 'light'));
+
+    // Setup dark/light mode for the first time
+    onSelectMode(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+
+    // Remove listener
+    return () => {
+      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
+      });
+    }
+  }, []);
 
   const onSelectMode = (mode) => {
     setMode(mode);
