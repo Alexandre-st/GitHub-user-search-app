@@ -9,7 +9,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.25rem;
-  min-width: 327px;
 
   h1 {
     font-size: 1.625rem;
@@ -30,45 +29,5 @@ header {
       width: 20px;
       height: 20px;
     }
-  }
-}
-
-.search {
-  background-color: var(--background-content);
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-
-  &-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6.5px 7px 7.5px 1rem;
-
-    input::placeholder {
-      color: var(--text-color);
-      font-size: 13px;
-    }
-
-    &-glass {
-      display: flex;
-      gap: 8.95px;
-      align-items: center;
-    }
-  }
-
-  img {
-    width: 20px;
-    height: 20px;
-  }
-
-  button {
-    width: 5.25rem;
-    height: 2.875rem;
-    background-color: var(--blue);
-    font-size: 0.875rem;
-    font-weight: var(--bold);
-    color: var(--white);
-    border-radius: 10px;
-    margin-left: -1rem;
   }
 }

@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
+import HomePage from './components/HomePage';
 import './styles/index.scss';
 
 const App = () => {
   return ( 
     <>
-      <Header />
-      <Main />
+      <HomePage />
     </>
    );
 }
