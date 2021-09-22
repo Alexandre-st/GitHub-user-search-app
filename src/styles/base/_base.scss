@@ -1,4 +1,4 @@
-// @use "../abstract" as *;
+@use "../variables/mixins" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
@@ -18,4 +18,15 @@ h2 {
 
 p {
   font-size: 0.8125rem;
+
+  @include mq(tablet) {
+    font-size: 0.9375rem;
+  }
+}
+
+header,
+section,
+main {
+  max-width: 573px;
+  margin: 0 auto;
 }

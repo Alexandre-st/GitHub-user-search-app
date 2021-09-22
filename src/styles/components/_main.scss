@@ -1,3 +1,5 @@
+@use "../variables/mixins" as *;
+
 main {
   padding: 0 1.5rem 4.9375rem 1.5rem;
 }
@@ -7,10 +9,20 @@ main {
   padding: 2rem 1.5rem 3rem 1.5rem;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
+  margin-top: 1.5rem;
+
+  @include mq(tablet) {
+    padding: 2.5rem;
+  }
 
   &-picture {
     width: 4.375rem;
     height: 4.375rem;
+
+    @include mq(tablet) {
+      width: 7.3125rem;
+      height: 7.3125rem;
+    }
 
     img {
       border-radius: 50%;
@@ -20,17 +32,33 @@ main {
   &-head {
     display: flex;
     gap: 1.1875rem;
+
+    @include mq(tablet) {
+      gap: 41px;
+      align-items: center;
+    }
+
     &-content {
       &-name {
         h2 {
           color: var(--title-color);
           font-weight: var(--bold);
           line-height: 1.5rem;
+
+          @include mq(tablet) {
+            font-size: 1.625rem;
+            line-height: 2.4375rem;
+          }
         }
 
         h3 {
           color: var(--blue);
           font-size: 13px;
+
+          @include mq(tablet) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
         }
       }
 
@@ -57,6 +85,13 @@ main {
       text-align: center;
       border-radius: 10px;
 
+      @include mq(tablet) {
+        margin: 2rem 0 1.5rem 0;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 95px;
+      }
+
       h4 {
         color: var(--text-color);
         font-weight: normal;
@@ -68,12 +103,23 @@ main {
         color: var(--repo-color);
         font-weight: bold;
         font-size: 1rem;
-        margin: 0.5rem;
+        margin-top: 0.5rem;
+
+        @include mq(tablet) {
+          font-size: 1.375rem;
+          line-height: 2.0625rem;
+        }
       }
     }
   }
 
   &-infos {
+    @include mq(tablet) {
+      display: flex;
+      gap: 4.0625rem;
+      margin-top: 1.875rem;
+    }
+
     &-inline {
       display: flex;
       margin-bottom: 1rem;

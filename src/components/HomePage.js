@@ -13,10 +13,20 @@ const HomePage = () => {
     fetch(`https://api.github.com/users/${username}`)
     .then(async (response) => {
       const data = await response.json();
-      setUser(data);
+        setUser(data);
       // console.log(data);
+    })
+    .catch((error) => {
+      // showError(error);
+      console.log(error);
     });
   };
+
+
+  // const showError = () => {
+  //   const error = document.getElementsByClassName('error');
+  //   error.classList.add("error-visible");
+  // }
   
   useEffect(() => {
     fetchUser();

@@ -1,7 +1,12 @@
-@use '../abstract' as *;
+@use "../abstract" as *;
+@use "../variables/mixins" as *;
 
 header {
   padding: 1.9375rem 1.5rem 1rem 1.5rem;
+
+  @include mq(tablet) {
+    padding: 8.75rem 1.5rem 1rem 1.5rem;
+  }
 }
 
 .header {
@@ -23,6 +28,10 @@ header {
       color: var(--text-color);
       font-weight: var(--font-weight);
       letter-spacing: 2.5px;
+
+      @include mq(tablet) {
+        font-size: 0.8125rem;
+      }
     }
 
     img {
