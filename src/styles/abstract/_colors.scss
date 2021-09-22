@@ -8,6 +8,9 @@
   --dark: hsla(220, 40%, 13%, 1);
   --dark-blue: hsla(222, 41%, 20%, 1);
   --box-shadow: 0px 16px 30px -10px #4660bb33;
+  --color-logo: hsla(217, 35%, 45%, 1);
+  --filter: invert(100%) sepia(59%) saturate(2%) hue-rotate(323deg)
+    brightness(120%) contrast(100);
   --shadow-none: none;
   --font-weight: 400;
   --bold: 700;
@@ -17,13 +20,8 @@
   --background-repo: var(--blue_gray);
   --text-color: var(--blue-white);
   --repo-color: var(--dark);
+  --color-image: var(--color-logo);
 }
-
-// .light {
-//   --title-color: var(--dark);
-//   --background-text: var(--blue-gray);
-//   --toggle: var(--gray);
-// }
 
 .dark {
   --background: var(--dark);
@@ -36,4 +34,5 @@
   --box-shadow: var(--shadow-none);
   --font-weight: var(--bold);
   --repo-color: var(--white);
+  --color-image: var(--filter);
 }

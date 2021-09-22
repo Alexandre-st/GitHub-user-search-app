@@ -8,7 +8,18 @@ main {
   border-radius: 15px;
   box-shadow: var(--box-shadow);
 
+  &-picture {
+    width: 4.375rem;
+    height: 4.375rem;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
   &-head {
+    display: flex;
+    gap: 1.1875rem;
     &-content {
       &-name {
         h2 {
@@ -25,6 +36,7 @@ main {
 
       &-date {
         color: var(--text-color);
+        margin-top: 0.375rem;
       }
     }
   }
@@ -66,28 +78,32 @@ main {
       display: flex;
       margin-bottom: 1rem;
       color: var(--text-color);
+
+      img {
+        filter: var(--color-image);
+      }
     }
 
     .link {
       &-1 {
         width: 13.75px;
-        height: 20px;
+        height: 1.25rem;
         margin-right: 19.25px;
       }
 
       &-2 {
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
         margin-right: 13px;
       }
 
       &-3 {
-        width: 20px;
+        width: 1.25rem;
         margin-right: 13px;
       }
 
       &-4 {
-        width: 20px;
+        width: 1.25rem;
         height: 19.85px;
         margin-right: 13px;
       }

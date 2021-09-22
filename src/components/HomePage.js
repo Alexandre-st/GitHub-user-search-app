@@ -14,12 +14,13 @@ const HomePage = () => {
     .then(async (response) => {
       const data = await response.json();
       setUser(data);
-      console.log(data);
+      // console.log(data);
     });
   };
   
   useEffect(() => {
     fetchUser();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return ( 

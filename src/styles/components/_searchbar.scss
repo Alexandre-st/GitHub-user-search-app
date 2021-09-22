@@ -10,9 +10,15 @@
     justify-content: space-between;
     padding: 6.5px 7px 7.5px 1rem;
 
-    input::placeholder {
-      color: var(--text-color);
-      font-size: 13px;
+    input {
+      &::placeholder {
+        color: var(--text-color);
+        font-size: 13px;
+      }
+
+      &:focus {
+        color: var(--repo-color);
+      }
     }
 
     &-glass {

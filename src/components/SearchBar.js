@@ -10,11 +10,14 @@ const SearchBar = ({ setUsername, fetchUser }) => {
           <div className="search-bar-glass">
             <img src={loupe} alt="Loupe de recherche" />
             <label htmlFor="search-header">
-              <span className="visually-hidden">Search GitHub username…</span>
+              <span className="visually-hidden">
+                Search GitHub username…
+              </span>
             </label>
             <input 
               id="search-header"
               type="text" 
+              autoComplete="off"
               placeholder="Search GitHub username…" 
               onChange={(evt) => setUsername(evt.target.value)}
             />

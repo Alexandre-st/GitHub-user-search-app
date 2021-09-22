@@ -27,7 +27,9 @@ const Main = ({
     <main>
       <div className="content">
         <div className="content-head">
-          <div className="content-picture"></div>
+          <div className="content-picture">
+            <img src={avatar_url} alt={`Profil de ${login}`} />
+          </div>
           <div className="content-head-content">
             <div className="content-head-content-name">
               <h2>{name}</h2>
@@ -58,21 +60,33 @@ const Main = ({
         </div>
         <div className="content-infos">
           <div className="content-infos-left">
-            <div className="content-infos-inline">
+            <div 
+              className="content-infos-inline"
+              style={!location ? {opacity: 0.5} : {}}
+            >
               <img className="link-1" src={iconLocation} alt="Icon of location" />
               <p>{location ? location : "Not Available"}</p>
             </div>
-            <div className="content-infos-inline">
+            <div 
+              className="content-infos-inline"
+              style={!blog ? {opacity: 0.5} : {}}
+            >
               <img className="link-2" src={iconLink} alt="Icon of link" />
               <p>{blog ? blog : "Not Available"}</p>
             </div>
           </div>
           <div className="content-infos-right">
-            <div className="content-infos-inline">
+            <div 
+              className="content-infos-inline" 
+              style={!twitter_username ? {opacity: 0.5} : {}}
+            >
               <img className="link-3" src={iconTwitter} alt="Icon of Twitter" />
               <p>{twitter_username ? twitter_username : "Not Available"}</p>
             </div>
-            <div className="content-infos-inline">
+            <div 
+              className="content-infos-inline"
+              style={!company ? {opacity: 0.5} : {}}
+            >
               <img className="link-4" src={iconCompany} alt="Icon of company" />
               <p>{company ? company : "Not available"}</p>
             </div>
