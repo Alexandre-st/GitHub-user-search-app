@@ -3,34 +3,31 @@ import Header from "./Header";
 import Main from "./Main";
 import SearchBar from "./SearchBar";
 
-
 const HomePage = () => {
    
   const [username, setUsername] = useState('Octocat');
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState([]);
 
   const fetchUser = () => {
+
+    const error = document.querySelector('.error');
+    
     fetch(`https://api.github.com/users/${username}`)
     .then(async (response) => {
-      const data = await response.json();
+      if (response.ok) {
+        error.classList.remove('error-visible');
+        const data = await response.json();
         setUser(data);
-      // console.log(data);
-    })
-    .catch((error) => {
-      // showError(error);
-      console.log(error);
+        // console.log(data);
+      } else {
+        error.classList.add('error-visible');
+      }
     });
   };
-
-
-  // const showError = () => {
-  //   const error = document.getElementsByClassName('error');
-  //   error.classList.add("error-visible");
-  // }
-  
+      
   useEffect(() => {
     fetchUser();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return ( 

@@ -22,7 +22,7 @@ const SearchBar = ({ setUsername, fetchUser }) => {
                   onChange={(evt) => setUsername(evt.target.value)}
                 />
               </div>
-              {/* <span className="error">No results</span> */}
+              <span className="error">No results</span>
               <button onClick={() => fetchUser()}>Search</button>
           </div>
       </div>

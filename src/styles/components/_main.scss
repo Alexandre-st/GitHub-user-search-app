@@ -124,6 +124,7 @@ main {
       display: flex;
       margin-bottom: 1rem;
       color: var(--text-color);
+      flex-wrap: wrap;
 
       img {
         filter: var(--color-image);
