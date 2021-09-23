@@ -38,7 +38,18 @@ main {
       align-items: center;
     }
 
+    @include mq(desktop) {
+      align-items: initial;
+      margin-bottom: -30px;
+    }
+
     &-content {
+      @include mq(desktop) {
+        display: flex;
+        justify-content: space-between;
+        width: 28.78rem;
+      }
+
       &-name {
         h2 {
           color: var(--title-color);
@@ -53,7 +64,7 @@ main {
 
         h3 {
           color: var(--blue);
-          font-size: 13px;
+          font-size: 0.8125rem;
 
           @include mq(tablet) {
             font-size: 1rem;
@@ -70,10 +81,18 @@ main {
   }
 
   &-details {
+    @include mq(desktop) {
+      padding-left: 10rem;
+    }
+
     p {
       color: var(--text-color);
       margin-top: 2.0625rem;
       line-height: 25px;
+
+      @include mq(desktop) {
+        margin-top: 1rem;
+      }
     }
 
     &-repo {
@@ -90,6 +109,11 @@ main {
         justify-content: flex-start;
         text-align: left;
         gap: 95px;
+      }
+
+      @include mq(desktop) {
+        margin: 2rem 0 0 0;
+        padding: 1.125rem 0.875rem 0.9375rem 2rem;
       }
 
       h4 {
@@ -118,6 +142,10 @@ main {
       display: flex;
       gap: 4.0625rem;
       margin-top: 1.875rem;
+    }
+
+    @include mq(desktop) {
+      padding-left: 10rem;
     }
 
     &-inline {
@@ -155,5 +183,11 @@ main {
         margin-right: 13px;
       }
     }
+  }
+}
+
+.link {
+  &:hover {
+    border-bottom: 1px solid var(--text-color);
   }
 }

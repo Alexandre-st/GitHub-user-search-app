@@ -34,19 +34,24 @@ const Header = () => {
     <header>
       <div className="header">
         <h1>devfinder</h1>
-          {mode === 'dark' ? 
-            <div className="header-toggle" onClick={() => onSelectMode('light')}>
-              <p>LIGHT</p> 
-              <img src={sun} alt="Soleil pour changer la couleur du thème" />
-            </div>
-            : 
-            <div className="header-toggle" onClick={() => onSelectMode('dark')}>
-              <p>DARK</p> 
-              <img src={moon} alt="Lune pour changer la couleur du thème" />
-            </div>
-          }
+        {mode === 'dark' ? 
+          <div 
+            className="header-toggle" 
+            onClick={() => onSelectMode('light')}
+          >
+            <p>LIGHT</p> 
+            <img src={sun} alt="Soleil pour changer la couleur du thème" />
+          </div>
+          : 
+          <div 
+            className="header-toggle" 
+            onClick={() => onSelectMode('dark')}
+          >
+            <p>DARK</p> 
+            <img src={moon} alt="Lune pour changer la couleur du thème" />
+          </div>
+        }
       </div>
-      
     </header>
    );
 }

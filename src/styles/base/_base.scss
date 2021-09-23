@@ -27,6 +27,10 @@ p {
 header,
 section,
 main {
-  max-width: 573px;
+  max-width: 35.8125rem;
   margin: 0 auto;
+
+  @include mq(desktop) {
+    max-width: 45.625rem;
+  }
 }

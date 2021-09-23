@@ -72,7 +72,15 @@ const Main = ({
               style={!blog ? {opacity: 0.5} : {}}
             >
               <img className="link-2" src={iconLink} alt="Icon of link" />
-              <p>{blog ? blog : "Not Available"}</p>
+              <a 
+                href={blog}
+                style={!blog ? {pointerEvents: 'none'} : {}}
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
+                <p>{blog ? blog : "Not Available"}</p>
+              </a>
             </div>
           </div>
           <div className="content-infos-right">
@@ -81,8 +89,16 @@ const Main = ({
               style={!twitter_username ? {opacity: 0.5} : {}}
             >
               <img className="link-3" src={iconTwitter} alt="Icon of Twitter" />
-              <p>{twitter_username ? twitter_username : "Not Available"}</p>
-            </div>
+              <a 
+                href={`https://twitter.com/${twitter_username}`}
+                style={!twitter_username ? {pointerEvents: 'none'} : {}}
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
+                <p>{twitter_username ? twitter_username : "Not Available"}</p>
+                </a>
+              </div>
             <div 
               className="content-infos-inline"
               style={!company ? {opacity: 0.5} : {}}

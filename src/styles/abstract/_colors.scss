@@ -11,9 +11,13 @@
   --color-logo: hsla(217, 35%, 45%, 1);
   --filter: invert(100%) sepia(59%) saturate(2%) hue-rotate(323deg)
     brightness(120%) contrast(100);
+  --filter-img: brightness(0%);
+  --filter-img-reverse: invert(50%) sepia(11%) saturate(963%) hue-rotate(178deg)
+    brightness(93%) contrast(89%);
   --shadow-none: none;
   --font-weight: 400;
   --bold: 700;
+  --hover-blue: hsla(212, 100%, 69%, 1);
 
   --background: var(--blue_gray);
   --background-content: var(--white);
@@ -21,6 +25,8 @@
   --text-color: var(--blue-white);
   --repo-color: var(--dark);
   --color-image: var(--color-logo);
+  --hover-text: var(--dark);
+  --hover-img: var(--filter-img);
 }
 
 .dark {
@@ -35,4 +41,6 @@
   --font-weight: var(--bold);
   --repo-color: var(--white);
   --color-image: var(--filter);
+  --hover-text: var(--blue-white);
+  --hover-img: var(--filter-img-reverse);
 }
